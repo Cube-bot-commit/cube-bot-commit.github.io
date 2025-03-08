@@ -129,7 +129,8 @@ img{
     color: white;
     padding: 15px;
     border-radius: 0 0 5px;
-    width: 100%;
+    width: 100vw;
+    font-family: 'FontOne';
 }
 
 .caption h1 {
