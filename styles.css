@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -11,19 +11,19 @@
     src: url('./fonts/CourierPrime-Bold.ttf');
 }
 
-@font-face{
+@font-face {
     font-family: 'FontTwo';
     src: url('./fonts/UbuntuMono.ttf');
 }
 
-@font-face{
+@font-face {
     font-family: 'FontThree';
     src: url('./fonts/BebasNeue.ttf');
 }
 
-body{
+body {
     background-color: #aca4a4;
-    font-family: Arial, sans-serif;
+    font-family: "FontOne";
     margin: 0;
     padding: 0;
 }
@@ -32,73 +32,86 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-.container{
-    padding: 5px;
+.container {
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-header{
+/* Header */
+header {
     background-color: #333;
     color: white;
     font-family: 'FontOne';
     font-size: large;
 }
 
-header .container{
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul{
+/* Navigation */
+nav ul {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
 }
 
-nav ul li{
+nav ul li {
     padding: 10px;
 }
 
-.logo img{
+.logo img {
     border-radius: 50px;
-    width: 80px;
+    width: 50px;
 }
 
-a{
+a {
     color: #f2f2f8;
+    font-weight: bold;
+    transition: 0.3s ease;
 }
 
-li a{
-    font-weight: bolder;
-    transition: .3s ease;
+li a:hover {
+    border-bottom: 2px solid white;
 }
 
-li a:hover{
-    border: solid white;
-    border-radius: 3px;
-    padding: 3px;
-    border-left: none;
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
-img{
-    width: 100%;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
 }
 
-.hero-img img{
-    border-radius: 30px;
+.hero-big-text {
+    font-family: 'FontThree';
+    font-size: 50px;
+    color: #333;
 }
 
-.hero-text{
-    font-family: "FontOne"
+.hero-small-text {
+    font-family: 'FontTwo';
+    font-size: 20px;
+    color: #fff;
+    background: #333;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
 }
 
 /* Slider */
 .slider {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     height: 450px;
-    margin: 20px auto;
+    margin: 1px auto;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -108,15 +121,15 @@ img{
     display: flex;
     width: 100%;
     height: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     min-width: 100%;
-    transition: transform 0.5s ease-in-out;
     position: relative;
 }
 
-.slide img {
+.slide img, .slide video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -128,39 +141,79 @@ img{
     background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 15px;
-    border-radius: 0 0 5px;
-    width: 100vw;
-    font-family: 'FontOne';
+    width: 100%;
+    text-align: center;
 }
 
-.caption h1 {
-    font-size: 22px;
-    margin-bottom: 5px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        right: 0;
+        width: 100vw;
+        top: 100px;
+        left: 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .hero-big-text {
+        font-size: 36px;
+    }
+
+    header{
+        height: auto;
+    }
+
 }
 
-.caption p {
-    font-size: 16px;
+.section-text h1{
+    text-align: center;
+    margin-top: 15px;
+    background: #f2f2f8;
+    border-radius: 5px;
+    padding: 10px 0;
 }
 
-.hero{
+.section-boxes{
+    background: #333;
+    width: 465px;
+    height: auto;
+    padding: 10px;
+}
+
+.box-one{
+    background: #f2f2f8;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    height: auto;
+    width: 100%;
+    border: 5px solid black;
+}
+
+.section-thumbnail{
+    width: 100%;
+    height: 200px;
+    background: #333;
+    border-radius: 5px;
+}
+
+.section-thumbnail img{
+    width: 100%;
     height: 100%;
 }
 
-.hero-big-text{
-    font-family: 'FontThree';
-    font-size: 50px;
-    color: #333;
+.section-title{
     text-align: center;
-    margin-top: 20px;
-}
-
-.hero-small-text{
-    font-family: 'FontTwo';
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    margin-top: 20px;
-    background: #333;
-    padding: 10px;
-    border-radius: 10px;
 }
