@@ -217,3 +217,29 @@ li a:hover {
 .section-title{
     text-align: center;
 }
+
+.more a{
+    color: #000;
+    font-weight: bolder;
+    font-size: 15px
+}
+
+.more{
+    height: auto;
+    padding: 5px 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/*Blogs Section */
+.blogs-section{
+    background: #fff;
+    height: auto;
+}
+
+.blogs-main-title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+}
